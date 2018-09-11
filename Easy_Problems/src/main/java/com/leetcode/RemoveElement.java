@@ -14,7 +14,7 @@ public class RemoveElement {
 
         String[] parts = input.split(",");
         int[] output = new int[parts.length];
-        for(int index = 0; index < parts.length; index++) {
+        for (int index = 0; index < parts.length; index++) {
             String part = parts[index].trim();
             output[index] = Integer.parseInt(part);
         }
@@ -27,7 +27,7 @@ public class RemoveElement {
         }
 
         String result = "";
-        for(int index = 0; index < length; index++) {
+        for (int index = 0; index < length; index++) {
             int number = nums[index];
             result += Integer.toString(number) + ", ";
         }
@@ -57,8 +57,8 @@ public class RemoveElement {
 class Solution7 {
     public int removeElement(int[] nums, int val) {
         int i = 0;
-        for(int num : nums){
-            if(val != num){
+        for (int num : nums) {
+            if (val != num) {
                 nums[i++] = num;
             }
         }
