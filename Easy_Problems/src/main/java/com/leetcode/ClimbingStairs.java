@@ -30,39 +30,21 @@ public class ClimbingStairs {
 class Solution15 {
     public int climbStairs(int n) {
 
-        int step_1_max_number = n;
-        int step_2_max_number = n / 2;
-        int a = 0;  //step_1_number
-        int b;  //step_2_number
-        int result = 0;
-        for (; a <= step_1_max_number; a++) {
-            b = (n - a) / 2;
-            if (b <= step_2_max_number && a + 2 * b == n) {
-                result += count(a, b);
-            }
+        if(n == 1) return 1;
+        int[] result = new int[n];
+        for (int i = 0; i < result.length; i++){
+            result[i] = -1;
         }
-        return result;
+        result[0] = 1;
+        result[1] = 2;
+        return dp(n - 1, result);
+
     }
 
-    private int count(int a, int b) {
-//        int temp_result = 1;
-//        if (a > 0 && b == 0 || a == 0 && b > 0) {
-//            return temp_result;
-//        }
-//        int temp = 1;
-//        for (int i = 1; i <= b; i++) {
-//            temp_result *= (a + i);
-//        }
-//
-//        return b >= 2 ? temp_result / 2 : temp_result;
-        return a <= b ? factorial(a) / (factorial(b) * factorial((a - b))) : 0;
-    }
-
-    private static int factorial(int n) {
-        int sum = 1;
-        while (n > 0) {
-            sum = sum * n--;
+    private int dp(int n, int[] result) {
+        if(result[n] == -1){
+            result[n] = dp(n - 1, result) + dp(n - 2,result);
         }
-        return sum;
+        return result[n];
     }
 }
