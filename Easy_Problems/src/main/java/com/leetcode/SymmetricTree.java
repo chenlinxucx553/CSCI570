@@ -7,12 +7,13 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Given two binary trees, write a function to check if they are the same or not.
+ * Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
  *
  * @Author: Aaron Yang
- * @Date: 9/16/2018 10:17 AM
+ * @Date: 9/16/2018 11:00 AM
  */
-public class SameTree {
+public class SymmetricTree {
+
     public static TreeNode stringToTreeNode(String input) {
         input = input.trim();
         input = input.substring(1, input.length() - 1);
@@ -65,60 +66,27 @@ public class SameTree {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         String line;
         while ((line = in.readLine()) != null) {
-            TreeNode p = stringToTreeNode(line);
-            line = in.readLine();
-            TreeNode q = stringToTreeNode(line);
+            TreeNode root = stringToTreeNode(line);
 
-            boolean ret = new Solution18().isSameTree(p, q);
+            boolean ret = new Solution19().isSymmetric(root);
 
             String out = booleanToString(ret);
 
             System.out.print(out);
         }
     }
+
 }
 
-class Solution18 {
-    public boolean isSameTree(TreeNode p, TreeNode q) {
-        if ((null != p && null != q) && p.val == q.val) {
-            if (null != p.left && null != q.left) {
-                if(!isSameTree(p.left, q.left)){
-                    return false;
-                }
-            } else if ((null == p.left && null != q.left) || (null != p.left && null == q.left)) {
-                return false;
-            }
-
-            if (null != p.right && null != q.right) {
-                if(!isSameTree(p.right, q.right)){
-                    return false;
-                }
-            } else if ((null == p.right && null != q.right) || (null != p.right && null == q.right)) {
-                return false;
-            }
-            return true;
-        }else if(null == p && null == q){
-            return true;
-        }
-        return false;
+class Solution19 {
+    public boolean isSymmetric(TreeNode root) {
+        if (root == null) return true;
+        return isSymmetric(root.left, root.right);
     }
 
-    //concise approach
-//    public boolean isSameTree(TreeNode p, TreeNode q) {
-//        if(p == null && q == null) return true;
-//        if(p == null || q == null) return false;
-//        if(p.val == q.val)
-//            return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
-//        return false;
-//    }
-}
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
+    private boolean isSymmetric(TreeNode left, TreeNode right) {
+        if (left == null && right == null) return true;
+        if (left == null || right == null || left.val != right.val) return false;
+        return isSymmetric(left.left, right.right) && isSymmetric(right.left, left.right);
     }
 }

@@ -7,12 +7,13 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Given two binary trees, write a function to check if they are the same or not.
+ * Given a binary tree, find its maximum depth.
  *
  * @Author: Aaron Yang
- * @Date: 9/16/2018 10:17 AM
+ * @Date: 9/17/2018 9:11 AM
  */
-public class SameTree {
+public class MaximumDepthOfBinaryTree {
+
     public static TreeNode stringToTreeNode(String input) {
         input = input.trim();
         input = input.substring(1, input.length() - 1);
@@ -57,68 +58,39 @@ public class SameTree {
         return root;
     }
 
-    public static String booleanToString(boolean input) {
-        return input ? "True" : "False";
-    }
-
     public static void main(String[] args) throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         String line;
         while ((line = in.readLine()) != null) {
-            TreeNode p = stringToTreeNode(line);
-            line = in.readLine();
-            TreeNode q = stringToTreeNode(line);
+            TreeNode root = stringToTreeNode(line);
 
-            boolean ret = new Solution18().isSameTree(p, q);
+            int ret = new Solution20().maxDepth(root);
 
-            String out = booleanToString(ret);
+            String out = String.valueOf(ret);
 
             System.out.print(out);
         }
     }
 }
 
-class Solution18 {
-    public boolean isSameTree(TreeNode p, TreeNode q) {
-        if ((null != p && null != q) && p.val == q.val) {
-            if (null != p.left && null != q.left) {
-                if(!isSameTree(p.left, q.left)){
-                    return false;
-                }
-            } else if ((null == p.left && null != q.left) || (null != p.left && null == q.left)) {
-                return false;
-            }
-
-            if (null != p.right && null != q.right) {
-                if(!isSameTree(p.right, q.right)){
-                    return false;
-                }
-            } else if ((null == p.right && null != q.right) || (null != p.right && null == q.right)) {
-                return false;
-            }
-            return true;
-        }else if(null == p && null == q){
-            return true;
-        }
-        return false;
+class Solution20 {
+    public int maxDepth(TreeNode root) {
+        if (null == root) return 0;
+        return Math.max(getDepth(root.left, 1), getDepth(root.right, 1));
     }
 
-    //concise approach
-//    public boolean isSameTree(TreeNode p, TreeNode q) {
-//        if(p == null && q == null) return true;
-//        if(p == null || q == null) return false;
-//        if(p.val == q.val)
-//            return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
-//        return false;
-//    }
-}
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
+    int getDepth(TreeNode root, int result) {
+        if (null != root) {
+            result += 1;
+            if (null != root.left) {
+                int leftDepth = getDepth(root.left, result);
+                if (null != root.right) {
+                    return Math.max(leftDepth, getDepth(root.right, result));
+                }
+                return leftDepth;
+            }
+            if (null != root.right) return getDepth(root.right, result);
+        }
+        return result;
     }
 }
