@@ -101,30 +101,44 @@ public class BinaryTreeLevelOrderTraversal_II {
 
 class Solution21 {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        List<List<Integer>> result = new ArrayList<>();
-        Stack<List> stack = new Stack<>();
-        if (null != root) {
-            stack.push(Arrays.asList(root.val));
-            Queue<TreeNode> queue = new LinkedList<TreeNode>();
-            queue.offer(root);
-            while (!queue.isEmpty()) {
-                TreeNode tree = queue.poll();
-                if (null != tree.left && null != tree.right) {
-                    queue.offer(tree.left);
-                    queue.offer(tree.right);
-                    stack.push(Arrays.asList(tree.left.val, tree.right.val));
-                } else if (null != tree.left && null == tree.right) {
-                    queue.offer(tree.left);
-                    stack.push(Arrays.asList(tree.left.val));
-                }else if (null == tree.left && null != tree.right) {
-                    queue.offer(tree.right);
-                    stack.push(Arrays.asList(tree.right.val));
-                }
+        if (null == root) return new LinkedList<List<Integer>>();
+        LinkedList<List<Integer>> result = new LinkedList<List<Integer>>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            List<Integer> levels = new ArrayList<>();
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.remove();
+                levels.add(node.val);
+                if (null != node.left) queue.add(node.left);
+                if (null != node.right) queue.add(node.right);
             }
-        }
-        while (!stack.isEmpty()){
-            result.add(stack.pop());
+            result.addFirst(levels);
         }
         return result;
     }
+
+//    public List<List<Integer>> levelOrderBottom2(TreeNode root) {
+//        if (null == root) return new ArrayList<>();
+//        List<List<Integer>> result = new ArrayList<>();
+//        Stack<List<Integer>> stack = new Stack<>();
+//        Queue<TreeNode> queue = new LinkedList<>();
+//        queue.add(root);
+//        while (!queue.isEmpty()) {
+//            List<Integer> temp = new ArrayList<>();
+//            int size = queue.size();
+//            for (int i = 0; i < size; i++) {
+//                TreeNode node = queue.remove();
+//                temp.add(node.val);
+//                if (null != node.left) queue.add(node.left);
+//                if (null != node.right) queue.add(node.right);
+//            }
+//            stack.push(temp);
+//        }
+//        while (!stack.isEmpty()){
+//            result.add(stack.pop());
+//        }
+//        return result;
+//    }
 }
