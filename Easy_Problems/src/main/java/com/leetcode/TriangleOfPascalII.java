@@ -4,16 +4,18 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Given a non-negative integer numRows, generate the first numRows of Pascal's triangle.
+ * Given a non-negative index k where k ≤ 33, return the kth index row of the Pascal's triangle.
+ * Note that the row index starts from 0.
  *
  * @Author: Aaron Yang
- * @Date: 9/20/2018 10:19 AM
+ * @Date: 9/20/2018 11:17 AM
  */
-public class TriangleOfPascal {
+public class TriangleOfPascalII {
 
     public static String integerArrayListToString(List<Integer> nums, int length) {
         if (length == 0) {
@@ -45,21 +47,21 @@ public class TriangleOfPascal {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         String line;
         while ((line = in.readLine()) != null) {
-            int numRows = Integer.parseInt(line);
+            int rowIndex = Integer.parseInt(line);
 
-            List<List<Integer>> ret = new Solution27().generate(numRows);
+            List<Integer> ret = new Solution28().getRow(rowIndex);
 
-            String out = int2dListToString(ret);
+            String out = integerArrayListToString(ret);
 
             System.out.print(out);
         }
     }
 }
-
-class Solution27 {
-    public List<List<Integer>> generate(int numRows) {
+class Solution28 {
+    public List<Integer> getRow(int rowIndex) {
         List<List<Integer>> result = new ArrayList<>();
-        for (int i = 0; i < numRows; i++) {
+
+        for (int i = 0; i < rowIndex + 1; i++) {
             LinkedList<Integer> rowList = new LinkedList<>();
             rowList.addFirst(1);
             for (int j = 1; j < i; j++) {
@@ -69,6 +71,17 @@ class Solution27 {
             if (i > 0) rowList.addLast(1);
             result.add(rowList);
         }
-        return result;
+        return result.get(rowIndex);
+
     }
+//    public List<Integer> getRow(int rowIndex) {
+//        List<Integer> ret = new LinkedList<Integer>();
+//        for (int row = 0; row <= rowIndex; row++) {
+//            ret.add(0, 1);
+//            for (int i = 1; i < row; i++)
+//                ret.set(i, ret.get(i) + ret.get(i + 1));
+//        }
+//        return ret;
+//
+//    }
 }
