@@ -3,7 +3,6 @@ package com.leetcode;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 /**
  * Say you have an array for which the ith element is the price of a given stock on day i.
