@@ -91,10 +91,10 @@ class Solution5 {
                 temp.next = new ListNode(l2.val);
                 l2.next = l1.next;
                 l1.next = l2;
-                l2= temp.next.next;
+                l2 = temp.next.next;
 
             } else {
-                 temp = l2;
+                temp = l2;
                 l2.next = l1;
                 l2 = temp.next;
             }
@@ -124,5 +124,6 @@ class ListNode {
 
     ListNode(int x) {
         val = x;
+        next = null;
     }
 }
