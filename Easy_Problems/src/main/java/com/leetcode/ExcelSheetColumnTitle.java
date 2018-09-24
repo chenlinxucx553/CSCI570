@@ -30,11 +30,23 @@ public class ExcelSheetColumnTitle {
 class Solution34 {
 
     public String convertToTitle(int n) {
-        String res = "";
-        while(n != 0) {
-            res = (char)('A' + (n - 1) % 26) + res;
+        StringBuffer buffer = new StringBuffer();
+        String[] alphabet = new String[]{"A", "B", "C", "D", "E", "F", "G", "H",
+                "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U",
+                "V", "W", "X", "Y", "Z"};
+        while (n != 0) {
+            buffer.append(alphabet[(n - 1) % 26]);
             n = (n - 1) / 26;
         }
-        return res;
+        return buffer.reverse().toString();
     }
+
+//    public String convertToTitle(int n) {
+//        String res = "";
+//        while(n != 0) {
+//            res = (char)('A' + (n - 1) % 26) + res;
+//            n = (n - 1) / 26;
+//        }
+//        return res;
+//    }
 }
