@@ -22,4 +22,22 @@ Note:
 Your output is the whole Person table after executing your sql. Use delete statement.
  */
 
---Solution
+--Solution(ORACLE)
+DELETE FROM PERSON
+WHERE ID = (SELECT MAX(ID)
+            FROM PERSON A
+              JOIN (SELECT
+                      EMAIL,
+                      COUNT(EMAIL)
+                    FROM PERSON T
+                    GROUP BY EMAIL
+                    HAVING COUNT(EMAIL) > 1) B
+                ON A.EMAIL = B.EMAIL)
+
+
+--Solution(Mysql)
+DELETE p1 FROM Person p1,
+Person p2
+WHERE
+p1.Email = p2.Email AND p1.Id > p2.Id
+

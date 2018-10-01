@@ -26,8 +26,16 @@ CREATE TABLE Weather (
   Temperature INT
 );
 TRUNCATE TABLE Weather;
-INSERT INTO Weather (Id, RecordDate, Temperature) VALUES ('1', '2015-01-01', '10');
-INSERT INTO Weather (Id, RecordDate, Temperature) VALUES ('2', '2015-01-02', '25');
-INSERT INTO Weather (Id, RecordDate, Temperature) VALUES ('3', '2015-01-03', '20');
-INSERT INTO Weather (Id, RecordDate, Temperature) VALUES ('4', '2015-01-04', '30');
+INSERT INTO Weather (Id, RecordDate, Temperature) VALUES ('1', to_date('2015-01-01', 'yyyy-mm-dd'), '10');
+INSERT INTO Weather (Id, RecordDate, Temperature) VALUES ('2', to_date('2015-01-02', 'yyyy-mm-dd'), '25');
+INSERT INTO Weather (Id, RecordDate, Temperature) VALUES ('3', to_date('2015-01-03', 'yyyy-mm-dd'), '20');
+INSERT INTO Weather (Id, RecordDate, Temperature) VALUES ('4', to_date('2015-01-04', 'yyyy-mm-dd'), '30');
+
+--Solution(Oracle)
+SELECT B.ID
+FROM WEATHER A
+  INNER JOIN WEATHER B
+    ON A.RECORDDATE + 1 = B.RECORDDATE
+WHERE A.TEMPERATURE < B.TEMPERATURE
+
 
