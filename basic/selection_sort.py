@@ -7,6 +7,7 @@ import random
 """
 核心思想： 同时遍历整个数组两次， 外层循环选定一个数， 内层循环进行比较和交换，
 目标： 把最小值往前放
+优化： 通过记录最小值标签，减少交换的次数，比较次数还是一样的
 """
 
 
@@ -23,7 +24,7 @@ def selection_sort(arr):
         for j in range(i, len(arr)):
             count += 1
             # print("({}, {}) -> arr : {}".format(i, j, arr))
-            if arr[i] >= arr[j]:
+            if arr[i] > arr[j]:
                 switch += 1
                 arr[i], arr[j] = arr[j], arr[i]
     print("count : ", count)
@@ -44,7 +45,7 @@ def selection_index(arr):
         for j in range(i, len(arr)):
             count += 1
             # print("({}, {}) -> arr : {}".format(i, j, arr))
-            if arr[min_idx] >= arr[j]:
+            if arr[min_idx] > arr[j]:
                 min_idx = j
         if i != min_idx:
             switch += 1
