@@ -55,9 +55,13 @@ def insection_binary(arr):
             else:
                 low = mid + 1
 
+        # 将[low, i] 的值 依次往后移一位
+        # 为什么不能正序移位， 因为在不申请多余空间的条件下，
+        # 正序移位造成前面的值把后面的值覆盖
         for j in range(i, low, -1):
             switch += 1
             arr[j] = arr[j - 1]
+        # 把新加进来的值 放在空出来的位置
         arr[low] = current
     print("count : ", count)
     print("switch : ", switch)
