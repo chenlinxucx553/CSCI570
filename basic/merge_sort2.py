@@ -9,6 +9,11 @@ import random
 
 迭代方式的归并排序， 直接将单个元素组合排列， 最后再将两个有序的结果再排序
 
+迭代方式，从最小问题开始一步一步解决  直到复杂的问题
+1. 划分每个子数组 元素的个数
+2. 对每个相邻的数组进行排序, 然后对相邻的两个数组进行合并
+    相邻两个数组的 通过[low: mid], [mid: high] 进行切分获得 
+
 """
 
 
@@ -30,17 +35,28 @@ def merge(arr, low, mid, high):
     arr[low: high] = result
 
 
+def merge2(arr, low, mid, high):
+    left = arr[low: mid]
+    right = arr[mid: high]
+    res = []
+    while left and right:
+        min_val = left.pop(0) if left[0] < right[0] else right.pop(0)
+        res.append(min_val)
+    res += left if left else right
+    arr[low: high] = res
+
+
 def merge_iteration(arr):
-    step = 1
-    while step < len(arr):
+    sub_length = 1
+    while sub_length < len(arr):
         low = 0
         while low < len(arr):
-            mid = low + step  # mid前后均为有序
-            high = min(low + 2 * step, len(arr))
+            mid = low + sub_length  # mid前后均为有序
+            high = min(low + 2 * sub_length, len(arr))
             if mid < high:
-                merge(arr, low, mid, high)
-            low += 2 * step
-        step *= 2
+                merge2(arr, low, mid, high)
+            low += 2 * sub_length
+        sub_length *= 2
     return arr
 
 
