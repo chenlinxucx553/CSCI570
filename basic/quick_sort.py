@@ -24,7 +24,7 @@ import random
 
 def quick_sort3(arr, left, right):
     if left < right:
-        pivot_idx = split(arr, left, right)
+        pivot_idx = split2(arr, left, right)
         quick_sort3(arr, left, pivot_idx - 1)
         quick_sort3(arr, pivot_idx + 1, right)
     return arr
