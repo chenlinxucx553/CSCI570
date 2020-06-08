@@ -24,9 +24,9 @@ import random
 
 def quick_sort3(arr, left, right):
     if left < right:
-        pivot_idx = split2(arr, left, right)
+        pivot_idx = split(arr, left, right)
         quick_sort3(arr, left, pivot_idx - 1)
-        quick_sort3(arr, pivot_idx + 1, right)
+        quick_sort3(arr, pivot_idx, right)
     return arr
 
 
@@ -34,7 +34,7 @@ def split(arr, left, right):
     pivot = arr[right]
     i = left - 1
     for j in range(left, right):
-        if arr[j] <= pivot:
+        if arr[j] <= pivot:  # 把小的往前放
             i += 1
             arr[i], arr[j] = arr[j], arr[i]
     arr[i + 1], arr[right] = pivot, arr[i + 1]
@@ -45,7 +45,7 @@ def quick_sort4(arr):
     if arr:
         pivot = arr[0]
         less = [x for x in arr if x < pivot]
-        great = [x for x in arr[1:] if x >= pivot]
+        great = [x for x in arr if x > pivot]
         return quick_sort4(less) + [pivot] + quick_sort4(great)
     else:
         return []
@@ -54,7 +54,8 @@ def quick_sort4(arr):
 if __name__ == '__main__':
     # random.seed(666)
     arr = random.sample(range(0, 100000), 10)
-    sorted_arr3 = quick_sort3(arr.copy(), 0, len(arr) - 1)  # count -> 503 switch -> 467
-    sorted_arr4 = quick_sort4(arr)
+    arr2 = [1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 7, 7, 7, 8, 9, 9, 9, 60]
+    sorted_arr3 = quick_sort3(arr2.copy(), 0, len(arr2) - 1)  # count -> 503 switch -> 467
+    sorted_arr4 = quick_sort4(arr2)
     print(sorted_arr3)
     print(sorted_arr4)

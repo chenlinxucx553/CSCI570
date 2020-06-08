@@ -34,6 +34,30 @@ def insection_sort(arr):
     return arr
 
 
+def insection_sort2(arr):
+    """
+    内循环 遍历之前已经排序好的数组，把值插在合适的位置
+    :param arr:
+    :return:
+    """
+    count = 0
+    switch = 0
+    for i in range(len(arr)):
+        prev_idx = i - 1
+        current = arr[i]
+
+        for j in range(prev_idx, -1, -1):
+            if arr[prev_idx] > current:
+                count += 1
+                switch += 1
+                arr[prev_idx + 1] = arr[prev_idx]
+                prev_idx -= 1
+        arr[prev_idx + 1] = current
+    print("count : ", count)
+    print("switch : ", switch)
+    return arr
+
+
 def insection_binary(arr):
     """
     内循环 通过折半查找的方式，插入新的值，不像之前的全遍历一遍
@@ -61,6 +85,7 @@ def insection_binary(arr):
         for j in range(i, low, -1):
             switch += 1
             arr[j] = arr[j - 1]
+
         # 把新加进来的值 放在空出来的位置
         arr[low] = current
     print("count : ", count)
@@ -68,10 +93,28 @@ def insection_binary(arr):
     return arr
 
 
+def insection_binary2(arr):
+    for i in range(len(arr)):
+        low, high = 0, i - 1
+        current = arr[i]
+        while low <= high:
+            mid = (low + high) // 2
+            if arr[mid] < current:
+                low = mid + 1
+            else:
+                high = mid - 1
+
+        for j in range(i, low, -1):
+            arr[j] = arr[j - 1]
+        # 把新加进来的值 放在空出来的位置
+        arr[low] = current
+    return arr
+
+
 if __name__ == '__main__':
     # random.seed(666)
-    arr = random.sample(range(0, 100000), 100)
-    sorted_arr1 = insection_sort(arr.copy())  # count -> 2219 switch -> 2219
-    sorted_arr2 = insection_binary(arr.copy())  # count -> 535 switch -> 2219
+    arr = random.sample(range(0, 100000), 10)
+    sorted_arr1 = insection_sort2(arr.copy())  # count -> 2219 switch -> 2219
+    sorted_arr2 = insection_binary2(arr.copy())  # count -> 535 switch -> 2219
     print(sorted_arr1)
     print(sorted_arr2)

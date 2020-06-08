@@ -6,8 +6,6 @@ if __name__ == '__main__':
     print(33 // 2)
     print(33 / 2)
 
-    print(1 if 1 < 2 else 2)
-
     arr = []
 
     if arr:

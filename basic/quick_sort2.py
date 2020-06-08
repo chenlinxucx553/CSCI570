@@ -22,6 +22,44 @@ __date__ = '6/5/2020 10:56 AM'
 import random
 
 
+def quick_sort6(arr, left, right):
+    if left < right:
+        pivot = arr[right]
+        low, high = left, right
+        while left < right:
+
+            while left < right and arr[left] < pivot:
+                left += 1
+            arr[right] = arr[left]
+            while left < right and arr[right] > pivot:
+                right -= 1
+            arr[left] = arr[right]
+
+        arr[left] = pivot
+        quick_sort6(arr, low, left - 1)
+        quick_sort6(arr, left + 1, high)
+    return arr
+
+
+def quick_sort5(arr, left, right):
+    if left < right:
+        pivot = arr[left]
+        low, high = left, right
+        while left < right:
+
+            while left < right and arr[right] > pivot:
+                right -= 1
+            arr[left] = arr[right]
+            while left < right and arr[left] < pivot:
+                left += 1
+            arr[right] = arr[left]
+
+        arr[right] = pivot
+        quick_sort5(arr, low, left - 1)
+        quick_sort5(arr, left + 1, high)
+    return arr
+
+
 def quick_sort2(arr, left, right):
     if left >= right:
         return arr
@@ -52,3 +90,6 @@ if __name__ == '__main__':
 
     sorted_arr2 = quick_sort2(arr.copy(), 0, len(arr) - 1)  # count -> 503 switch -> 467
     print(sorted_arr2)
+
+    sorted_arr5 = quick_sort6(arr.copy(), 0, len(arr) - 1)  # count -> 503 switch -> 467
+    print(sorted_arr5)
