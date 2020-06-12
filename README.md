@@ -5,3 +5,9 @@ This course is about designing algorithms for computational problems, and how to
 
 #### Homework
 
+#### [Wiki](https://github.com/AaronYang2333/CSCI_570/wiki)
+
+[Basic 9 Algorithm in Python](https://github.com/AaronYang2333/CSCI_570/wiki/Basic-9-Algorithm-in-Python)
+
+[Design Pattern in Python](https://github.com/AaronYang2333/CSCI_570/wiki/Design-Pattern-in-Python)
+
