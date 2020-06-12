@@ -51,11 +51,12 @@ def quick_sort4(arr):
         return []
 
 
+
 if __name__ == '__main__':
     # random.seed(666)
     arr = random.sample(range(0, 100000), 10)
     arr2 = [1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 7, 7, 7, 8, 9, 9, 9, 60]
     sorted_arr3 = quick_sort3(arr2.copy(), 0, len(arr2) - 1)  # count -> 503 switch -> 467
-    sorted_arr4 = quick_sort4(arr2)
+    sorted_arr4 = quick_sort4(arr)
     print(sorted_arr3)
     print(sorted_arr4)
