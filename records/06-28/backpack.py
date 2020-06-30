@@ -6,15 +6,24 @@ __date__ = '6/28/2020 11:50 AM'
 https://blog.csdn.net/MrLevo520/article/details/75676160
 """
 
+"""
+    read array by column
+    a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    print(list(zip(*a))) # [(1, 4, 7), (2, 5, 8), (3, 6, 9)]
+"""
+
 # 这里使用了图解中的吉他，音箱，电脑，手机做的测试，数据保持一致
-weight = [0, 1, 4, 3, 1]  # n个物体的重量(w[0]无用)
-value = [0, 1500, 3000, 2000, 2000]  # n个物体的价值(p[0]无用)
-info = [(0, 0), (1, 1500), (4, 3000), (3, 2000), (1, 2000)]
+item_info = [(1, 1500), (4, 3000), (3, 2000), (1, 2000)]
 threshold = 4  # 背包的载重量
 
 
-def knapsack_dynamic(weight, price, limit):
-    max_value, items = 0, []
+def knapsack_dynamic(info, limit):
+    weight, price = [0], [0]
+    transposed_info = list(zip(*info))
+    weight.extend(transposed_info[0])
+    price.extend(transposed_info[1])
+
+    max_value, bags = 0, []
     records = [[0 for __ in range(limit + 1)] for _ in range(len(weight))]
 
     for i in range(1, len(weight)):  # 物品一件件来
@@ -30,15 +39,15 @@ def knapsack_dynamic(weight, price, limit):
     j = limit
     for i in range(len(weight) - 1, 0, -1):
         if records[i][j] > records[i - 1][j]:
-            items.append(i)
+            bags.append(i)
             j = j - weight[i]
 
             # 返回最大价值，即表格中最后一行最后一列的值
     max_value = records[len(weight) - 1][limit]
-    return max_value, items
+    return max_value, bags
 
 
-amount, items = knapsack_dynamic(weight, value, threshold)
+amount, items = knapsack_dynamic(item_info, threshold)
 print(amount, items)
 
 # 最大值为：4000
