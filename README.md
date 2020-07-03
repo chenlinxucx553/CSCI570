@@ -7,6 +7,6 @@ This course is about designing algorithms for computational problems, and how to
 
 ### [Wiki](https://github.com/AaronYang2333/CSCI_570/wiki)
 
-* [## 7 Basic Sorting Algorithms in Python (七个基础的排序算法)](https://github.com/AaronYang2333/CSCI_570/wiki/Basic-7-Algorithms-in-Python)
+* [7 Basic Sorting Algorithms in Python (七个基础的排序算法)](https://github.com/AaronYang2333/CSCI_570/wiki/Basic-7-Algorithms-in-Python)
 * [Design Pattern in Python (设计模式Python版)](https://github.com/AaronYang2333/CSCI_570/wiki/Design-Pattern-in-Python)
 

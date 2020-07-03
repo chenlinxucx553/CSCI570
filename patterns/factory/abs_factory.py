@@ -7,7 +7,10 @@ import abc
 
 class Factory(abc.ABC):
     @abc.abstractmethod
-    def produce(self):
+    def produce_partA(self):
+        return DefaultObj()
+
+    def produce_partB(self):
         return DefaultObj()
 
 
@@ -17,9 +20,14 @@ class Product(abc.ABC):
         pass
 
 
-class PC(Product):
+class PC_A(Product):
     def info(self):
-        print("This is a PC")
+        print("This is a PC_A")
+
+
+class PC_B(Product):
+    def info(self):
+        print("This is a PC_B")
 
 
 class DefaultObj(Product):
@@ -27,14 +35,22 @@ class DefaultObj(Product):
         print("This is a DefaultObj")
 
 
-class LapTop(Product):
+class LapTop_A(Product):
     def info(self):
-        print("This is a LapTop")
+        print("This is a LapTop_A")
+
+
+class LapTop_B(Product):
+    def info(self):
+        print("This is a LapTop_B")
 
 
 class PCFacotry(Factory):
-    def produce(self):
-        return PC()
+    def produce_partA(self):
+        return PC_A()
+
+    def produce_partB(self):
+        return PC_B()
 
 
 class LapTopFacotry(Factory):
@@ -48,18 +64,21 @@ class LapTopFacotry(Factory):
 
     """
 
-    def produce(self):
-        return super(LapTopFacotry, self).produce()
+    def produce_partA(self):
+        return LapTop_A()
 
     def customized_produce(self):
-        return LapTop()
+        return super(LapTopFacotry, self).produce_partA()
+
+    def produce_partB(self):
+        return LapTop_B()
 
 
 if __name__ == '__main__':
-    pc = PCFacotry().produce()
-    laptop = LapTopFacotry().customized_produce()
-    pc.info()
-    laptop.info()
 
-    for _ in range(10):
-        print(PCFacotry().produce())
+    for factory in [PCFacotry(), LapTopFacotry()]:
+        part_a = factory.produce_partA()
+        part_b = factory.produce_partB()
+        ## do some manipulations
+        part_a.info()
+        part_b.info()
