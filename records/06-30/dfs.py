@@ -2,7 +2,6 @@ __author__ = 'Aaron Yang'
 __email__ = 'byang971@usc.edu'
 __date__ = '6/30/2020 3:44 PM'
 
-result = list()
 
 
 def dfs(graph, visited, init_node):
@@ -35,6 +34,6 @@ if __name__ == '__main__':
     # 'F': ['D', 'E', 'G'],
     # 'G': ['E', 'F']
     # }
-
+    result = list()
     dfs(graph_dict, result, "D")
     print(result) # ['D', 'A', 'B', 'C', 'E', 'F', 'G']
