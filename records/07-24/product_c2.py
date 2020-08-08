@@ -6,13 +6,15 @@ __date__ = '7/28/2020 11:16 PM'
 def consumer():
     print("[CONSUMER] start")
     r = 'c start'
-    while True:
+    times = 3000
+    while times > 0:
         n = yield r
         if not n:
             print("n is empty")
             continue
         print("[CONSUMER] Consumer is consuming %s" % n)
         r = "200 ok"
+        times -=1
 
 
 def producer(c):
@@ -20,7 +22,7 @@ def producer(c):
     start_value = c.send(None)
     print("msg from customer:", start_value)
     n = 0
-    while n < 3:
+    while n < 300:
         n += 1
         print("[PRODUCER] Producer is producing %d" % n)
         r = c.send(n)
