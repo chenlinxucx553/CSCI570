@@ -27,17 +27,20 @@ def is_prime(num):
     return True
 
 
-if __name__ == "__main__":
-    # # 读取第一行的n
-    n = int(input().strip())
-    values = list(map(int, input().split()))
-    ans = 0
-    for val in values:
-        times = val // 2
-        val -= 2 * times
-        if is_prime(val):
-            ans += 1
+# if __name__ == "__main__":
+#     # # 读取第一行的n
+#     n = int(input().strip())
+#     values = list(map(int, input().split()))
+#     ans = 0
+#     for val in values:
+#         times = val // 2
+#         val -= 2 * times
+#         if is_prime(val):
+#             ans += 1
+#
+#         ans += times
+#
+#     print(ans)
 
-        ans += times
-
-    print(ans)
+res = find_all_prime(41)
+print(res)
