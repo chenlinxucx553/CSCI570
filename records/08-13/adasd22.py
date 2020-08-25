@@ -23,17 +23,20 @@ def gen2(num):
 
 # gen_prime(41)
 
-gen2(41)
+# gen2(41)
 
 
 def find_all_prime(num):
-    res = set()
+    res = []
     for val in range(2, num + 1):
         prime = True
         for y in range(2, val):
             if val % y == 0:
                 prime = False
         if prime:
-            res.add(val)
+            res.append(val)
 
     return res
+
+res = find_all_prime(40)
+print(res)
