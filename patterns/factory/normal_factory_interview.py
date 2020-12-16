@@ -8,7 +8,7 @@ import abc
 class Factory(abc.ABC):
     @abc.abstractmethod
     def produce(self):
-        return DefaultObj()
+        pass
 
 
 class Product(abc.ABC):
@@ -20,11 +20,6 @@ class Product(abc.ABC):
 class PC(Product):
     def info(self):
         print("This is a PC")
-
-
-class DefaultObj(Product):
-    def info(self):
-        print("This is a DefaultObj")
 
 
 class LapTop(Product):

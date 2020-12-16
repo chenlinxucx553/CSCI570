@@ -6,37 +6,27 @@ import threading
 
 
 class Singleton(object):
-    _instance_lock = threading.Lock()
-
-    def __init__(self):
-        # time.sleep(1)
-        pass
-
-    @classmethod
-    def get_instance(cls, *args, **kwargs):
-        if not hasattr(Singleton, "_instance"):
-            with Singleton._instance_lock:
-                if not hasattr(Singleton, "_instance"):
-                    Singleton._instance = Singleton(*args, **kwargs)
-        return Singleton._instance
-
-    # def __new__(cls, *args, **kwargs):
-    #     if not hasattr(Singleton, "_instance"):
-    #         with Singleton._instance_lock:
-    #             if not hasattr(Singleton, "_instance"):
-    #                 Singleton._instance = object.__new__(cls)
-    #     return Singleton._instance
+    _lock = threading.Lock()
+    _instances = None
 
 
-# def task(arg):
-#     obj = Singleton.instance()
-#     print(obj)
-#
-#
-# for i in range(10):
-#     t = threading.Thread(target=task, args=[i, ])
-#     t.start()
-# time.sleep(20)
+    def __call__(cls, *args, **kwargs):
+        with cls._lock:
+            if not cls :
+                instance = super().__call__(*args, **kwargs)
+                cls._instances[cls] = instance
+        return cls._instances[cls]
+
+
+def test_singleton(value: str) -> None:
+    singleton = Singleton()
+    print(singleton)
+
+
 for _ in range(33):
-    obj = Singleton.get_instance()
+    obj = Singleton()
     print(obj)
+
+# for i in range(10):
+#     process = threading.Thread(target=test_singleton, args=(i,))
+#     process.start()
