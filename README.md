@@ -4,10 +4,11 @@
 This course is about designing algorithms for computational problems, and how to think clearly about analyzing correctness and running time. The main goal of this course is to provide the intellectual tools needed for designing and analyzing your own algorithms for new problems you need to solve in the future. The course explores fundamental algorithm design techniques such as greedy, divide and conquer, dynamic programming, network flow, reduction, approximation, linear programming and randomization for efficient algorithm construction. The course describes Turing machines and explains what NP-completeness means with respect to possibilities for solving these problems efficiently.
 
 #### Homework
+
 |No.|    Name    |PDF file|Tags|Score|
 |---|------------------------|-----------|----|-----|
 |1|[Homework 1](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW1.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_1/Bo_Yang_CSCI_570_HW_1.pdf) |`Runtime Complexity` `BFS` `DDFS` `Induction Proof` `Graph`|100/100|
-|2|[Homework 2](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW2.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_2/Bo_Yang_CSCI_570_HW_2.pdf) |`Greedy Algorithm` | 80/80|
+|2|[Homework 2](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW2.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_2/Bo_Yang_CSCI_570_HW_2.pdf) |`Greedy Algorithm`| 80/80 |
 |3|[Homework 3](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW3.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_3/Bo_Yang_CSCI_570_HW_3.pdf) |`Divide-and-Conquer ` `Dynamic Programming` `Master Theorem`|100/100|
 |4|[Homework 4](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW4.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_4/Bo_Yang_CSCI_570_HW_4.pdf) |`MapReduce` `Spark` `Pyspark`|100/100|
 |5|[Homework 5](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW5.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_5/Bo_Yang_CSCI_570_HW_5.pdf) |`MapReduce` `Spark` `Pyspark`|100/100|
