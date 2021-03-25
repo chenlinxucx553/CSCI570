@@ -9,11 +9,18 @@ This course is about designing algorithms for computational problems, and how to
 |---|------------------------|-----------|----|-----|
 |1|[Homework 1](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW1.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_1/Bo_Yang_CSCI_570_HW_1.pdf) |`Runtime Complexity` `BFS` `DDFS` `Induction Proof` `Graph`|100/100|
 |2|[Homework 2](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW2.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_2/Bo_Yang_CSCI_570_HW_2.pdf) |`Greedy Algorithm`| 80/80 |
-|3|[Homework 3](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW3.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_3/Bo_Yang_CSCI_570_HW_3.pdf) |`Divide-and-Conquer ` `Dynamic Programming` `Master Theorem`|100/135|
+|3|[Homework 3](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW3.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_3/Bo_Yang_CSCI_570_HW_3.pdf) |`Divide-and-Conquer ` `Dynamic Programming` `Master Theorem`|133/135|
 |4|[Homework 4](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW4.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_4/Bo_Yang_CSCI_570_HW_4.pdf) |`Network Flow` `Reduction` `Ford-Fulkerson`|100/100|
 |5|[Homework 5](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW5.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_5/Bo_Yang_CSCI_570_HW_5.pdf) |`MapReduce` `Spark` `Pyspark`|100/100|
 |6|[Homework 6](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW6.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_6/Bo_Yang_CSCI_570_HW_6.pdf) |`MapReduce` `Spark` `Pyspark`|100/100|
 
+
+#### Exam
+
+|No.|    Name    |PDF file|Tags|Score|
+|---|------------------------|-----------|----|-----|
+|1|[Exam 1](https://github.com/AaronYang2333/CSCI_570/blob/master/exam1/Exam 1 - Rubrics.pdf)|[Practice Material](https://github.com/AaronYang2333/CSCI_570/blob/master/exam1/Practice Exam.pdf) |`Runtime Complexity` `BFS` `DDFS` `Induction Proof` `Graph` `Divide-and-Conquer ` `Dynamic Programming` `Master Theorem`|62/85|
+|1|[Exam 2](https://github.com/AaronYang2333/CSCI_570/blob/master/exam2/Exam 2 - Rubrics.pdf)|[Practice Material](https://github.com/AaronYang2333/CSCI_570/blob/master/exam2/Practice Exam.pdf) |`Runtime Complexity` `BFS` `DDFS` `Induction Proof` `Graph` `Divide-and-Conquer ` `Dynamic Programming` `Master Theorem`|100/100|
 
 ### [Wiki](https://github.com/AaronYang2333/CSCI_570/wiki)
 
