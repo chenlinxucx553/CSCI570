@@ -11,8 +11,8 @@ This course is about designing algorithms for computational problems, and how to
 |2|[Homework 2](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW2.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_2/Bo_Yang_CSCI_570_HW_2.pdf) |`Greedy Algorithm`| 80/80 |
 |3|[Homework 3](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW3.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_3/Bo_Yang_CSCI_570_HW_3.pdf) |`Divide-and-Conquer ` `Dynamic Programming` `Master Theorem`|133/135|
 |4|[Homework 4](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW4.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_4/Bo_Yang_CSCI_570_HW_4.pdf) |`Network Flow` `Reduction` `Ford-Fulkerson`|100/100|
-|5|[Homework 5](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW5.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_5/Bo_Yang_CSCI_570_HW_5.pdf) |`MapReduce` `Spark` `Pyspark`|100/100|
-|6|[Homework 6](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW6.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_6/Bo_Yang_CSCI_570_HW_6.pdf) |`MapReduce` `Spark` `Pyspark`|100/100|
+|5|[Homework 5](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW5.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_5/Bo_Yang_CSCI_570_HW_5.pdf) |`Linear Programming` `NP-Completeness` `SAT`|100/100|
+|6|[Homework 6](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW6.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_6/Bo_Yang_CSCI_570_HW_6.pdf) |`Linear Programming` `NP-Completeness` `SAT` `Independent Set` `Approximation`|100/100|
 
 
 #### Exam
@@ -20,18 +20,20 @@ This course is about designing algorithms for computational problems, and how to
 |No.|    Name    |PDF file|Tags|Score|
 |---|------------------------|-----------|----|-----|
 |1|[Exam 1](https://github.com/AaronYang2333/CSCI_570/blob/master/exam1/Exam_1_Rubrics.pdf)|[Practice Material](https://github.com/AaronYang2333/CSCI_570/blob/master/exam1/Practice_Exam.pdf) |`Runtime Complexity` `BFS` `DDFS` `Induction Proof` `Graph` `Divide-and-Conquer ` `Dynamic Programming` `Master Theorem`|62/85|
-|1|[Exam 2](https://github.com/AaronYang2333/CSCI_570/blob/master/exam2/Exam_2_Rubrics.pdf)|[Practice Material](https://github.com/AaronYang2333/CSCI_570/blob/master/exam2/Practice_Exam.pdf) |`Runtime Complexity` `BFS` `DDFS` `Induction Proof` `Graph` `Divide-and-Conquer ` `Dynamic Programming` `Master Theorem`|100/100|
+|1|[Exam 2](https://github.com/AaronYang2333/CSCI_570/blob/master/exam2/Exam_2_Rubrics.pdf)|[Practice Material](https://github.com/AaronYang2333/CSCI_570/blob/master/exam2/Practice_Exam.pdf) |`Network Flow` `Reduction` `Ford-Fulkerson` `Linear Programming` `NP-Completeness` `SAT` `Independent Set` `Approximation`|100/100|
 
 ### [Wiki](https://github.com/AaronYang2333/CSCI_570/wiki)
 
 - Q&A
-  * [Chapter 1](http://AaronYang2333.github.io/blog/2021/01/21/AIA-ch1-Q-A/)
-  * [Chapter 2](http://AaronYang2333.github.io/blog/2021/01/24/AIA-ch2-Q-A/)
-  * [Chapter 3](https://aaronyang2333.github.io/blog/2021/02/06/AIA-ch3-Q-A/)
-  * [Chapter 4](https://aaronyang2333.github.io/blog/2021/02/15/AIA-ch4-Q-A/)
-  * [Chapter 5](https://aaronyang2333.github.io/blog/2021/03/03/AIA-ch5-Q-A/)
-  * [Chapter 6](https://aaronyang2333.github.io/blog/2021/03/20/AIA-ch6-Q-A/)
-  * [Chapter 7](https://aaronyang2333.github.io/blog/2021/03/22/AIA-ch7-Q-A/)
+  * [Chapter 1 Review](http://AaronYang2333.github.io/blog/2021/01/21/AIA-ch1-Q-A/)
+  * [Chapter 2 Amortized Analysis](http://AaronYang2333.github.io/blog/2021/01/24/AIA-ch2-Q-A/)
+  * [Chapter 3 Heaps](https://aaronyang2333.github.io/blog/2021/02/06/AIA-ch3-Q-A/)
+  * [Chapter 4 Greedy Algorithm](https://aaronyang2333.github.io/blog/2021/02/15/AIA-ch4-Q-A/)
+  * [Chapter 5 Divide-and-Conquer Algorithm](https://aaronyang2333.github.io/blog/2021/03/03/AIA-ch5-Q-A/)
+  * [Chapter 6 Dynamic Programming](https://aaronyang2333.github.io/blog/2021/03/20/AIA-ch6-Q-A/)
+  * [Chapter 7 Network Flow](https://aaronyang2333.github.io/blog/2021/03/22/AIA-ch7-Q-A/)
+  * [Chapter 8 Linear Programming](https://aaronyang2333.github.io/blog/2021/04/20/AIA-ch8-Q-A/)
+  * [Chapter 9 NP Completeness](https://aaronyang2333.github.io/blog/2021/04/20/AIA-ch9-Q-A/)
 
 - Java
   * [7 Basic Sorting Algorithms in Java (七个基础的排序算法)](https://github.com/AaronYang2333/CSCI_570/wiki/Basic-7-Algorithms-in-Python)
