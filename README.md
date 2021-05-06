@@ -18,9 +18,9 @@ This course is about designing algorithms for computational problems, and how to
 #### Exam
 
 |No.|    Name    |PDF file|Tags|Score|
-|---|------------------------|-----------|----|-----|
+|---|------------|--------|----|-----|
 |1|[Exam 1](https://github.com/AaronYang2333/CSCI_570/blob/master/exam1/Exam_1_Rubrics.pdf)|[Practice Material](https://github.com/AaronYang2333/CSCI_570/blob/master/exam1/Practice_Exam.pdf) |`Runtime Complexity` `BFS` `DDFS` `Induction Proof` `Graph` `Divide-and-Conquer ` `Dynamic Programming` `Master Theorem`|62/85|
-|1|[Exam 2](https://github.com/AaronYang2333/CSCI_570/blob/master/exam2/Exam_2_Rubrics.pdf)|[Practice Material](https://github.com/AaronYang2333/CSCI_570/blob/master/exam2/Practice_Exam.pdf) |`Network Flow` `Reduction` `Ford-Fulkerson` `Linear Programming` `NP-Completeness` `SAT` `Independent Set` `Approximation`|100/100|
+|2|[Exam 2](https://github.com/AaronYang2333/CSCI_570/blob/master/exam2/Exam_2_Rubrics.pdf)|[Practice Material](https://github.com/AaronYang2333/CSCI_570/blob/master/exam2/Practice_Exam.pdf) |`Network Flow` `Reduction` `Ford-Fulkerson` `Linear Programming` `NP-Completeness` `SAT` `Independent Set` `Approximation`|100/100|
 
 ### [Wiki](https://github.com/AaronYang2333/CSCI_570/wiki)
 
