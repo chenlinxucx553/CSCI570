@@ -6,7 +6,7 @@ This course is about designing algorithms for computational problems, and how to
 #### Homework
 
 |No.|    Name    |PDF file|Tags|Score|
-|---|------------------------|-----------|----|-----|
+|---|------------|--------|----|-----|
 |1|[Homework 1](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW1.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_1/Bo_Yang_CSCI_570_HW_1.pdf) |`Runtime Complexity` `BFS` `DDFS` `Induction Proof` `Graph`|100/100|
 |2|[Homework 2](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW2.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_2/Bo_Yang_CSCI_570_HW_2.pdf) |`Greedy Algorithm`| 80/80 |
 |3|[Homework 3](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW3.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_3/Bo_Yang_CSCI_570_HW_3.pdf) |`Divide-and-Conquer ` `Dynamic Programming` `Master Theorem`|133/135|
@@ -20,7 +20,7 @@ This course is about designing algorithms for computational problems, and how to
 |No.|    Name    |PDF file|Tags|Score|
 |---|------------|--------|----|-----|
 |1|[Exam 1](https://github.com/AaronYang2333/CSCI_570/blob/master/exam1/Exam_1_Rubrics.pdf)|[Practice Material](https://github.com/AaronYang2333/CSCI_570/blob/master/exam1/Practice_Exam.pdf) |`Runtime Complexity` `BFS` `DDFS` `Induction Proof` `Graph` `Divide-and-Conquer ` `Dynamic Programming` `Master Theorem`|62/85|
-|2|[Exam 2](https://github.com/AaronYang2333/CSCI_570/blob/master/exam2/Exam_2_Rubrics.pdf)|[Practice Material](https://github.com/AaronYang2333/CSCI_570/blob/master/exam2/Practice_Exam.pdf) |`Network Flow` `Reduction` `Ford-Fulkerson` `Linear Programming` `NP-Completeness` `SAT` `Independent Set` `Approximation`|100/100|
+|2|[Exam 2](https://github.com/AaronYang2333/CSCI_570/blob/master/exam2/Exam_2_Rubrics.pdf)|[Practice Material](https://github.com/AaronYang2333/CSCI_570/blob/master/exam2/Practice_Exam.pdf) |`Network Flow` `Reduction` `Ford-Fulkerson` `Linear Programming` `NP-Completeness` `SAT` `Independent Set` `Approximation`|85/100|
 
 ### [Wiki](https://github.com/AaronYang2333/CSCI_570/wiki)
 
