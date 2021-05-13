@@ -12,7 +12,7 @@ This course is about designing algorithms for computational problems, and how to
 |3|[Homework 3](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW3.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_3/Bo_Yang_CSCI_570_HW_3.pdf) |`Divide-and-Conquer ` `Dynamic Programming` `Master Theorem`|133/135|
 |4|[Homework 4](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW4.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_4/Bo_Yang_CSCI_570_HW_4.pdf) |`Network Flow` `Reduction` `Ford-Fulkerson`|100/100|
 |5|[Homework 5](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW5.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_5/Bo_Yang_CSCI_570_HW_5.pdf) |`Linear Programming` `NP-Completeness` `SAT`|100/100|
-|6|[Homework 6](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW6.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_6/Bo_Yang_CSCI_570_HW_6.pdf) |`Linear Programming` `NP-Completeness` `Reduction` `Approximation`|100/100|
+|6|[Homework 6](https://github.com/AaronYang2333/CSCI_570/blob/master/homeworks/CSCI_570_Spring_2021_HW6.pdf)|[PDF](https://github.com/AaronYang2333/CSCI_570/blob/master/homewok_solution/homework_6/Bo_Yang_CSCI_570_HW_6.pdf) |`Linear Programming` `NP-Completeness` `Reduction` `Approximation`|96/100|
 
 
 #### Exam
